@@ -7,8 +7,8 @@ app = Flask(__name__)
 if not os.path.exists("videos"):
     os.makedirs("videos")
 
-@app.route('/api/stream', methods=['POST'])
-def stream():
+@app.route('/api/video', methods=['POST'])
+def stream_videoo():
     video = request.files.get('video')
     if video:
         video_path = os.path.join("videos", "streamed_video.mp4")
